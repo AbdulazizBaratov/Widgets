@@ -1,0 +1,411 @@
+:root {
+    --primary-color: #ff6600;
+    --secondary-color: #000000;
+    --background-color: #f4f4f4;
+    --white: #ffffff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: var(--background-color);
+    color: var(--secondary-color);
+    line-height: 1.6;
+}
+
+/* Header Styling */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 5%;
+    background-color: var(--white);
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-weight: bold;
+}
+
+.logo img {
+    max-height: 50px;
+}
+
+nav {
+    display: flex;
+    gap: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--secondary-color);
+    transition: color 0.3s ease;
+    position: relative;
+}
+
+nav a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -5px;
+    left: 0;
+    background-color: var(--primary-color);
+    transition: width 0.3s ease;
+}
+
+nav a:hover::after {
+    width: 100%;
+}
+
+/* Hero Section */
+#hero {
+    text-align: center;
+    padding: 100px 20px;
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    color: var(--white);
+}
+
+#hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+#hero p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+}
+
+.cta-button {
+    display: inline-block;
+    background-color: var(--white);
+    color: var(--primary-color);
+    padding: 12px 25px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.cta-button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+/* Widgets Section */
+#widgets {
+    padding: 50px 5%;
+    background-color: var(--white);
+}
+
+#widgets h2 {
+    text-align: center;
+    margin-bottom: 40px;
+    color: var(--secondary-color);
+}
+
+.widget-section {
+    margin-bottom: 50px;
+    background-color: var(--background-color);
+    border-radius: 10px;
+    padding: 30px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.widget-section h3 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: var(--primary-color);
+}
+
+.widget-preview {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+
+/* Widget Styles */
+.newsletter-widget,
+.social-share-widget,
+.contact-widget {
+    background-color: var(--white);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.newsletter-widget {
+    display: flex;
+    width: 100%;
+    max-width: 400px;
+}
+
+.newsletter-widget input {
+    flex-grow: 1;
+    padding: 10px;
+    border: 2px solid var(--primary-color);
+    border-right: none;
+    border-radius: 5px 0 0 5px;
+}
+
+.newsletter-widget button {
+    background-color: var(--primary-color);
+    color: var(--white);
+    border: none;
+    padding: 10px 20px;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.newsletter-widget button:hover {
+    background-color: #e55500;
+}
+
+/* Code Display */
+.widget-code {
+    background-color: #f1f1f1;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.code-tabs {
+    display: flex;
+    background-color: #e0e0e0;
+}
+
+.code-tabs button {
+    flex: 1;
+    padding: 10px;
+    border: none;
+    background: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.code-tabs button.active {
+    background-color: var(--primary-color);
+    color: var(--white);
+}
+
+pre {
+    display: none;
+    padding: 20px;
+    background-color: #f1f1f1;
+    overflow-x: auto;
+    font-size: 0.9rem;
+}
+
+pre.active {
+    display: block;
+}
+
+.copy-buttons {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+}
+
+.copy-buttons button {
+    background-color: var(--primary-color);
+    color: var(--white);
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.copy-buttons button:hover {
+    background-color: #e55500;
+}
+
+/* About Section */
+#about {
+    padding: 50px 5%;
+    background-color: var(--background-color);
+    text-align: center;
+}
+
+.features {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 30px;
+}
+
+.feature {
+    background-color: var(--white);
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    max-width: 300px;
+    transition: transform 0.3s;
+}
+
+.feature:hover {
+    transform: translateY(-10px);
+}
+
+.feature h3 {
+    color: var(--primary-color);
+    margin-bottom: 10px;
+}
+
+/* Contact Section */
+#contact {
+    padding: 50px 5%;
+    background-color: var(--white);
+    text-align: center;
+}
+
+.contact-info {
+    margin-top: 20px;
+}
+
+/* Footer */
+footer {
+    background-color: var(--secondary-color);
+    color: var(--white);
+    text-align: center;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.social-links {
+    display: flex;
+    gap: 15px;
+}
+
+.social-links a {
+    color: var(--white);
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.social-links a:hover {
+    color: var(--primary-color);
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    header {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    nav {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .features {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .feature {
+        width: 90%;
+        max-width: 400px;
+    }
+
+    footer {
+        flex-direction: column;
+        gap: 20px;
+    }
+}
+/* Existing styles remain the same, adding new styles for modal and placeholders */
+
+/* New Widget Modal Styles */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.5);
+}
+
+.modal-content {
+    background-color: var(--white);
+    margin: 10% auto;
+    padding: 30px;
+    border-radius: 10px;
+    max-width: 500px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+.close-modal {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close-modal:hover {
+    color: var(--secondary-color);
+}
+
+#new-widget-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+#new-widget-form input,
+#new-widget-form textarea {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+#new-widget-form textarea {
+    min-height: 100px;
+    resize: vertical;
+}
+
+#new-widget-form button {
+    background-color: var(--primary-color);
+    color: var(--white);
+    border: none;
+    padding: 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#new-widget-form button:hover {
+    background-color: #e55500;
+}
+
+/* Placeholder Widget Styles */
+.placeholder-widget {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f0f0f0;
+    border: 2px dashed var(--primary-color);
+    min-height: 200px;
+}
+
+.placeholder-widget img {
+    max-width: 100%;
+    max-height: 200px;
+    object-fit: cover;
+}

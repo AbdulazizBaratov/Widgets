@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WebWidgets - Free Website Components</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <!-- Header Navigation -->
+    <header>
+        <div class="logo">
+            <img src="/api/placeholder/50/50" alt="WebWidgets Logo">
+            <span>WebWidgets</span>
+        </div>
+        <nav>
+            <a href="#widgets" class="nav-link">Widgets</a>
+            <a href="#about" class="nav-link">About</a>
+            <a href="#contact" class="nav-link">Contact</a>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="hero">
+        <h1>Free Website Components</h1>
+        <p>Copy. Paste. Build Faster.</p>
+        <a href="#widgets" class="cta-button">Explore Widgets</a>
+    </section>
+
+    <!-- Widgets Showcase -->
+    <section id="widgets">
+        <h2>Our Widgets</h2>
+        
+        <!-- Widget Container with Placeholder for Easy Addition -->
+        <div id="widget-container">
+            <!-- Existing Widgets Will Be Dynamically Loaded Here -->
+            
+            <!-- Newsletter Signup Widget (Example) -->
+            <div class="widget-section" data-widget-type="newsletter">
+                <h3>Newsletter Signup Widget</h3>
+                <div class="widget-preview">
+                    <div class="newsletter-widget placeholder-widget">
+                        <img src="/api/placeholder/400/200" alt="Newsletter Widget Placeholder">
+                    </div>
+                </div>
+                <div class="widget-code">
+                    <div class="code-tabs">
+                        <button class="active html-tab" data-tab="html">HTML</button>
+                        <button class="css-tab" data-tab="css">CSS</button>
+                    </div>
+                    <pre class="html-code active"><code>&lt;div class="newsletter-widget"&gt;
+    &lt;input type="email" placeholder="Enter your email"&gt;
+    &lt;button&gt;Subscribe&lt;/button&gt;
+&lt;/div&gt;</code></pre>
+                    <pre class="css-code"><code>.newsletter-widget {
+    display: flex;
+    max-width: 400px;
+    margin: 20px auto;
+}
+
+.newsletter-widget input {
+    flex-grow: 1;
+    padding: 10px;
+    border: 2px solid #ff6600;
+}
+
+.newsletter-widget button {
+    background-color: #ff6600;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+}</code></pre>
+                    <div class="copy-buttons">
+                        <button class="copy-html">Copy HTML</button>
+                        <button class="copy-css">Copy CSS</button>
+                    </div>
+                </div>
+            </div>
+
+<br>
+<br>
+<br>
+<br>
+<div id="widget-container">
+    Existing Widgets Will Be Dynamically Loaded Here -->
+   
+   Newsletter Signup Widget (Example) -->
+    <div class="widget-section" data-widget-type="newsletter">
+       <h3>Newsletter Signup Widget</h3>
+       <div class="widget-preview">
+           <div class="newsletter-widget placeholder-widget">
+               <img src="/api/placeholder/400/200" alt="Newsletter Widget Placeholder">
+           </div>
+       </div>
+       <div class="widget-code">
+           <div class="code-tabs">
+               <button class="active html-tab" data-tab="html">HTML</button>
+               <button class="css-tab" data-tab="css">CSS</button>
+           </div>
+           <pre class="html-code active"><code>&lt;div class="newsletter-widget"&gt;
+&lt;input type="email" placeholder="Enter your email"&gt;
+&lt;button&gt;Subscribe&lt;/button&gt;
+&lt;/div&gt;</code></pre>
+           <pre class="css-code"><code>.newsletter-widget {
+display: flex;
+max-width: 400px;
+margin: 20px auto;
+}
+
+.newsletter-widget input {
+flex-grow: 1;
+padding: 10px;
+border: 2px solid #ff6600;
+}
+
+.newsletter-widget button {
+background-color: #ff6600;
+color: white;
+border: none;
+padding: 10px 20px;
+}</code></pre>
+           <div class="copy-buttons">
+               <button class="copy-html">Copy HTML</button>
+               <button class="copy-css">Copy CSS</button>
+           </div>
+       </div>
+   </div> 
+
+            </div>
+        </div>
+    </section>
+
+    <!-- About/Features Section -->
+    <section id="about">
+        <h2>Why WebWidgets?</h2>
+        <div class="features">
+            <div class="feature">
+                <h3>Free</h3>
+                <p>100% free, no hidden costs</p>
+            </div>
+            <div class="feature">
+                <h3>Easy to Use</h3>
+                <p>Copy and paste, start building</p>
+            </div>
+            <div class="feature">
+                <h3>Responsive</h3>
+                <p>Works on all devices</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <h2>Contact Us</h2>
+        <div class="contact-info">
+            <p>Email: support@webwidgets.com</p>
+            <p>GitHub: github.com/webwidgets</p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2024 WebWidgets. All rights reserved.</p>
+        <div class="social-links">
+            <a href="https://github.com" target="_blank">GitHub</a>
+            <a href="https://twitter.com" target="_blank">Twitter</a>
+        </div>
+    </footer>
+
+    <!-- New Widget Modal -->
+    <div id="new-widget-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h2>Add New Widget</h2>
+            <form id="new-widget-form">
+                <input type="text" id="widget-name" placeholder="Widget Name" required>
+                <textarea id="widget-html" placeholder="HTML Code" required></textarea>
+                <textarea id="widget-css" placeholder="CSS Code" required></textarea>
+                <button type="submit">Create Widget</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
